@@ -1,29 +1,107 @@
 /* General setup */
+@font-face {
+    font-family: 'Vulgar Tongue';  /*this 'rule' determines the name of the font-family for the font file linked below*/
+    src: url('./font/old-english/OldEnglishFive.woff2') format('woff2'),
+        url('./font/old-english/OldEnglishFive.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+
+  
 html {
-    font-size: 10px;
+    font-size: 16px;
     margin: 0;
     font-family: sans-serif;
   }
   
-  body {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+
   /* Typography */
   
   h1 {
     font-size: 3.2rem;
+    font-family: 'Vulgar Tongue';
+    letter-spacing: 1.2rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 3px red, 0px 0px 3px red;
   }
   
   h2 {
+    font-family: 'Vulgar Tongue';
     font-size: 2.4rem;
+
+    background-color: #fff;
+    
+    position: sticky;
+    top: 0px;
   }
   
   p {
-    font-size: 1.4rem;
+    font-family: system-ui, 'Russo One';
+    font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
     line-height: 1.6;
     word-spacing: 0.6rem;
   }
+
+  .sacred-texts{
+    max-inline-size: 66ch;
+    margin: 0 auto;
+  }
+
+  span {
+    letter-spacing: 0.5rem;
+    color: red;
+    font-weight: bolder;
+  }
+
+  h3 {
+    font-family: 'Vulgar Tongue';
+    font-size: 5rem;
+
+
+    white-space: nowrap;
+    overflow: scroll;
+    /* text-overflow: ellipsis; */
+  }
+
+
+p::first-letter{
+  font-size: 3.2rem;
+  font-family: 'Vulgar Tongue';
+  text-shadow: 0px 0px 3px gold;
+
+}
+
+
+.tithe {
+  position: fixed;
+  bottom: 33px;
+  right: 33px;
+
+  text-align: center;
+  
+  font-size: inherit;
+  font-family: 'Vulgar Tongue';
+
+  padding: 0.5em 1.5em;
+
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.77);
+  border-radius: 0px;
+}
+
+.tithe:hover{
+  bottom: 31.5px;
+  right: 31.5px;
+  box-shadow: 1.5px 1.5px black;
+
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.tithe:active{
+  bottom: 30px;
+  right: 30px;
+  box-shadow: none;
+
+  color: rgba(255, 0, 0, 0.7);
+}
